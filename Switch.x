@@ -35,7 +35,7 @@
 		[musicSettings setObject:[NSNumber numberWithBool:NO] forKey:@"MusicShowCloudMediaEnabledSetting"];
 	}
 
-	[musicSettings writeToFile:@"/var/mobile/Library/Preferences/com.apple.mobileipod.plist" atomically:YES];
+	[musicSettings writeToFile:musicSettingsPlist atomically:YES];
 	
 	notify_post("com.apple.mobileipod-prefsChanged");
 }

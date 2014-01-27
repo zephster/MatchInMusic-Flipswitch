@@ -1,6 +1,9 @@
-THEOS_DEVICE_IP = 192.168.1.66
+#ipt4g - .1.66
+#ip5s  - .2.116
+#ipad  - .2.113
+THEOS_DEVICE_IP = 192.168.2.113
 
-include theos7/makefiles/common.mk
+include theos/makefiles/common.mk
 
 ARCHS = armv7 arm64
 
@@ -10,8 +13,8 @@ MatchInMusic_FRAMEWORKS = UIKit
 MatchInMusic_LIBRARIES = flipswitch
 MatchInMusic_INSTALL_PATH = /Library/Switches
 
-include theos7/makefiles/bundle.mk
-include theos7/makefiles/library.mk
+include $(THEOS_MAKE_PATH)/bundle.mk
+include $(THEOS_MAKE_PATH)/library.mk
 
 internal-after-install::
 	install.exec "killall -9 backboardd"
