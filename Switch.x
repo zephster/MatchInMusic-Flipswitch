@@ -3,6 +3,7 @@
 
 #import "FSSwitchDataSource.h"
 #import "FSSwitchPanel.h"
+#import "notify.h"
 
 #define musicSettingsPlist @"/var/mobile/Library/Preferences/com.apple.mobileipod.plist"
 
@@ -35,6 +36,8 @@
 	}
 
 	[musicSettings writeToFile:@"/var/mobile/Library/Preferences/com.apple.mobileipod.plist" atomically:YES];
+	
+	notify_post("com.apple.mobileipod-prefsChanged");
 }
 
 @end
