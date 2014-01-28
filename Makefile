@@ -1,7 +1,7 @@
 #ipt4g - .1.66
 #ip5s  - .2.116
 #ipad  - .2.113
-THEOS_DEVICE_IP = 192.168.2.113
+THEOS_DEVICE_IP = 192.168.0.135
 
 include theos/makefiles/common.mk
 
